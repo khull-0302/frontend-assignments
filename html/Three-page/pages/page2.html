@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,49 +7,56 @@
   </head>
   <body>
     <a href="../index.html">Home</a>
-    <h1>Information form</h1>
-    <hr />
-    <ul>
-      <li>Answer survey questions</li>
-      <li>Enter meeting date</li>
-      <li>Enter contact information</li>
-      <ul>
-        <li>Email</li>
-        <li>Phone number</li>
-      </ul>
-      <li>Submit</li>
-    </ul>
-    <hr />
+    <main>
+      <section class="info-form">
+        <h1>Information form</h1>
+        <hr />
+        <ul>
+          <li>Answer survey questions</li>
+          <li>Enter meeting date</li>
+          <li>Enter contact information</li>
+          <ul>
+            <li>Email</li>
+            <li>Phone number</li>
+          </ul>
+          <li>Submit</li>
+        </ul>
+        <hr />
+      </section>
 
-    <h3>Have you traveled outside the U.S.A</h3>
-    <label for="Yes">Yes</label>
-    <input name="question1" id="Yes" type="radio" value="Yes" />
-    <label for="No">No</label>
-    <input name="question1" id="No" type="radio" value="No" />
+      <section class="inputs-wrapper">
+        <h2>input your information below</h2>
+        <h3>Have you traveled outside the U.S.A</h3>
+        <label for="Yes">Yes</label>
+        <input name="question1" id="Yes" type="radio" value="Yes" />
+        <label for="No">No</label>
+        <input name="question1" id="No" type="radio" value="No" />
 
-    <h3>Do you have an active passport?</h3>
-    <label for="Yes">Yes</label>
-    <input name="question2" id="Yes" type="radio" value="Yes" />
-    <label for="No">No</label>
-    <input name="question2" id="No" type="radio" value="No" />
+        <h3>Do you have an active passport?</h3>
+        <label for="Yes">Yes</label>
+        <input name="question2" id="Yes" type="radio" value="Yes" />
+        <label for="No">No</label>
+        <input name="question2" id="No" type="radio" value="No" />
 
-    <h3>Enter a date to set up a meeting</h3>
-    <label for="meeting">Meeting Date</label>
-    <input id="meeting" name="date" type="date" />
+        <h3>Enter a date to set up a meeting</h3>
+        <label for="meeting">Meeting Date</label>
+        <input id="meeting" name="date" type="date" />
 
-    <h3>Your contact information</h3>
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="email" required />
-    <br />
-    <label for="phone">Phone number</label>
-    <input
-      type="tel"
-      name="phone"
-      id="phone"
-      placeholder="555-123-4567"
-      required
-    />
-    <br />
-    <input type="submit" value="Submit" />
+        <h3>Your contact information</h3>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email" required />
+        <br />
+        <label for="phone">Phone number</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="555-123-4567"
+          required
+        />
+        <br />
+        <input type="submit" value="Submit" />
+      </section>
+    </main>
   </body>
 </html>
