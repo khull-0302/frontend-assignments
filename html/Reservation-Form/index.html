@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation Form</title>
+  </head>
+  <body>
+    <h1>Book Your Trip</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+      <label for="first-name">First Name:</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first_name"
+        placeholder="Enter first name"
+        value=""
+        required
+      />
+      <br /><br />
+
+      <label for="last-name">Last Name:</label>
+      <input
+        type="text"
+        id="last-name"
+        name="last_name"
+        placeholder="Enter last name"
+        value=""
+        required
+      />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Enter email address"
+        value=""
+        required
+      />
+      <br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Enter phone number"
+        value=""
+        required
+      />
+      <br /><br />
+
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start_date" value="" required />
+      <br /><br />
+
+      <label for="end-date">End Date:</label>
+      <input
+        type="date"
+        id="end-date"
+        name="end_date"
+        placeholder=""
+        value=""
+        required
+      />
+      <br /><br />
+
+      <p>Package Type:</p>
+
+      <label for="basic-package">
+        <input
+          type="radio"
+          id="basicPackage"
+          name="package"
+          placeholder=""
+          value="basic"
+        />
+        Basic Package
+      </label>
+
+      <label for="premium-package">
+        <input
+          type="radio"
+          id="premiumPackage"
+          name="package"
+          placeholder=""
+          value="premium"
+        />
+        Premium Package
+      </label>
+
+      <br /><br />
+
+      <p>Optional Accommodations:</p>
+
+      <label for="rental-car">
+        <input
+          type="checkbox"
+          id="rental-car"
+          name="accommodations"
+          placeholder=""
+          value="rental_car"
+        />
+        Rental Car
+      </label>
+
+      <label for="hotel">
+        <input
+          type="checkbox"
+          id="hotel"
+          name="accommodations"
+          placeholder=""
+          value="hotel"
+        />
+        Hotel
+      </label>
+
+      <label for="other">
+        <input
+          type="checkbox"
+          id="other"
+          name="accommodations"
+          placeholder=""
+          value="other"
+        />
+        Other Accommodations
+      </label>
+
+      <br /><br />
+
+      <label for="destination">Destination:</label>
+      <select id="destination" name="destination">
+        <option value="">-- Select a Destination --</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="new_york">New York</option>
+      </select>
+
+      <br /><br />
+
+      <label for="requests">Special Requests:</label><br />
+      <textarea
+        id="requests"
+        name="special_requests"
+        rows="4"
+        cols="40"
+        placeholder="Enter any special requests here..."
+        required
+      ></textarea>
+
+      <br /><br />
+
+      <input
+        type="submit"
+        id="submit"
+        name="submit"
+        placeholder=""
+        value="Book Trip"
+      />
+    </form>
+  </body>
+</html>
