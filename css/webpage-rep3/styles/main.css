@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap");
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(14, 0, 0));
+}
+
+.logo,
+.nav-label {
+  font-size: large;
+  font-family: cursive;
+  font-style: oblique;
+}
+
+.icon,
+.nav-label2 a,
+.nav-label a,
+.nav-label,
+.nav-label2 {
+  font-size: large;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-style: oblique;
+  color: white;
+}
+
+main {
+  color: rgb(188, 139, 15);
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  font-size: large;
+  font-family: cursive;
+  font-style: oblique;
+}
+
+.hero-wrapper img {
+  height: 100vh;
+  width: 50vw;
+}
+
+.login-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-inputs-content input,
+.login-inputs h1 {
+  display: block;
+  flex-direction: column;
+  margin: 10px auto;
+}
