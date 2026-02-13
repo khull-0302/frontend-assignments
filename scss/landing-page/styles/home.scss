@@ -1,0 +1,150 @@
+$base-color: rgb(129, 71, 186);
+$accent-color: rgb(253, 141, 66);
+$gradient-theme: linear-gradient($accent-color, $base-color);
+
+@mixin nav-button() {
+  text-decoration: none;
+  box-shadow: inset 0px 0px 5px rgba(3, 2, 0, 0.4);
+  border: 5px solid $base-color;
+  border-radius: 10px;
+  padding: 10px 10px;
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+      font-size: larger;
+    }
+  }
+}
+
+@mixin styler($background-color) {
+  background-color: $background-color;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  padding: 10px;
+}
+
+@mixin grid($background-color) {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+
+  .one,
+  .two,
+  .three {
+    &:hover {
+      background-color: rgb(135, 129, 129);
+      color: white;
+    }
+  }
+  p {
+    padding: 0 5px;
+  }
+}
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  background: $gradient-theme;
+}
+
+.hero-container {
+  @include styler(white);
+  display: flex;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(170, 169, 167);
+
+    i {
+      color: rgb(246, 246, 246);
+      font-size: 30px;
+    }
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+
+  .north-info {
+    @include styler(rgb(89, 198, 89));
+    max-width: 300px;
+    margin: 10px;
+  }
+  .south-info {
+    @include styler(rgb(193, 81, 81));
+    max-width: 300px;
+    margin: 10px;
+  }
+  .central-info {
+    @include styler(rgb(81, 141, 193));
+    max-width: 300px;
+    margin: 10px;
+  }
+}
+
+.grid-container {
+  @include grid(black);
+  display: grid;
+  grid-template-columns: reapeat(3, 1fr);
+  grid-template-rows: reapeat(3, 1fr);
+  width: 90%;
+  gap: 5px;
+  margin-bottom: 20px;
+
+  .item {
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 0, 0);
+  }
+
+  .one {
+    @include grid(rgb(143, 70, 239));
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+  .two {
+    @include grid(rgb(115, 51, 133));
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  .three {
+    @include grid(rgb(164, 119, 160));
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+  }
+}
+
+.home-button,
+.about-button,
+.contact-button {
+  button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include nav-button();
+  }
+}

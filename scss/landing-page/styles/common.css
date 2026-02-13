@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+}
+
+.hero-img {
+  background: linear-gradient(rgb(253, 141, 66), rgb(129, 71, 186));
+  height: 100vh;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-msg-con {
+  background-color: rgb(253, 141, 66);
+  border: 10px solid rgb(253, 141, 66);
+  box-shadow: inset 0px 0px 20px rgba(3, 2, 0, 0.4);
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  height: 150px;
+  width: 300px;
+  background-color: rgb(157, 157, 157);
+  border-radius: 10px;
+  border-color: rgb(253, 141, 66);
+}
+
+.home-button button {
+  text-decoration: none;
+  box-shadow: inset 0px 0px 5px rgba(3, 2, 0, 0.4);
+  border: 5px solid rgb(129, 71, 186);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.home-button button a {
+  text-decoration: none;
+  color: black;
+}
+.home-button button a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  font-size: larger;
+}
+
+.about-button button {
+  text-decoration: none;
+  box-shadow: inset 0px 0px 5px rgba(3, 2, 0, 0.4);
+  border: 5px solid rgb(129, 71, 186);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.about-button button a {
+  text-decoration: none;
+  color: black;
+}
+.about-button button a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  font-size: larger;
+}
+
+.contact-button button {
+  text-decoration: none;
+  box-shadow: inset 0px 0px 5px rgba(3, 2, 0, 0.4);
+  border: 5px solid rgb(129, 71, 186);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.contact-button button a {
+  text-decoration: none;
+  color: black;
+}
+.contact-button button a:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  font-size: larger;
+}/*# sourceMappingURL=common.css.map */
