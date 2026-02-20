@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap");
+body {
+  margin: 0;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/clouds.jpg);
+  position: relative;
+  height: 600px;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.hero-section .hero-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+.hero-section .hero-image img {
+  margin: 0 auto;
+  width: 75%;
+  min-width: 1000px;
+  max-width: 1400px;
+  filter: brightness(0.5);
+}
+.hero-section .hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+  gap: 50px 0;
+  position: absolute;
+  color: white;
+  z-index: 3;
+}
+.hero-section .hero-content h1 {
+  font-size: 60px;
+}
+.hero-section .hero-content span {
+  font-size: 20px;
+  padding: 10px;
+}
+.hero-section .hero-content button {
+  padding: 15px 30px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #e91e63;
+}
+.hero-section .hero-content button a {
+  text-decoration: none;
+  color: white;
+}
+.hero-section .hero-content button:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.203);
+}
+
+.wwsf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 20px;
+  box-shadow: 0 0 10px;
+  color: grey;
+  position: relative;
+  margin-top: -50px;
+  z-index: 5;
+}
+.wwsf-container .wwsf-header {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-family: "Roboto Slab", serif;
+}
+.wwsf-container .wwsf-rows {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.wwsf-container .wwsf-rows .responsive,
+.wwsf-container .wwsf-rows .quality,
+.wwsf-container .wwsf-rows .support {
+  text-align: center;
+  width: 300px;
+  height: 400px;
+}
+.wwsf-container .wwsf-rows .responsive img,
+.wwsf-container .wwsf-rows .responsive h1,
+.wwsf-container .wwsf-rows .quality img,
+.wwsf-container .wwsf-rows .quality h1,
+.wwsf-container .wwsf-rows .support img,
+.wwsf-container .wwsf-rows .support h1 {
+  margin-bottom: 30px;
+  font-family: "Roboto Slab", serif;
+}
+
+.about-hestia {
+  max-width: 100%;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/mountains.jpg");
+  background-size: calc(100% - 42px) 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.about-hestia .about-left {
+  width: 50%;
+  text-align: center;
+}
+.about-hestia .about-left p {
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 300px;
+}
+.about-hestia img {
+  margin: 0 auto;
+  width: 400px;
+  height: auto;
+}
+
+.blog {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  padding: 40px 20px;
+  color: black;
+}
+.blog h1 {
+  margin-bottom: 40px;
+}
+.blog .blog-contents {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.blog .blog-content-left,
+.blog .blog-content-middle,
+.blog .blog-content-right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+  max-width: 300px;
+  padding-bottom: 80px;
+}
+.blog .blog-content-middle h3 a {
+  color: rgb(6, 5, 5);
+  text-decoration: none;
+}
+.blog .blog-contents p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  color: grey;
+}
+.blog #unc1 {
+  color: Purple;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.blog #unc2 {
+  color: aqua;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.blog #unc3 {
+  color: red;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.get-in-touch-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  max-width: 100%;
+  width: 100%;
+  min-height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+}
+.get-in-touch-container .get-in-touch-content {
+  margin: 100px 0 0 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 3;
+}
+.get-in-touch-container .get-in-touch-content h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.get-in-touch-container .get-in-touch-content i {
+  font-size: 40px;
+}
+.get-in-touch-container .get-in-touch-content p {
+  padding-left: 31px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.get-in-touch-container .give-us-a-ring {
+  margin-left: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 3;
+}
+.get-in-touch-container .give-us-a-ring i {
+  font-size: 40px;
+}
+.get-in-touch-container .give-us-a-ring p {
+  padding-left: 31px;
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=home.css.map */

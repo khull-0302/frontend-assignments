@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../assets/clouds.jpg);
+  position: relative;
+  height: 600px;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    img {
+      margin: 0 auto;
+      width: 75%;
+      min-width: 1000px;
+      max-width: 1400px;
+      filter: brightness(0.5);
+    }
+  }
+  .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 50px 0;
+    position: absolute;
+    color: white;
+    z-index: 3;
+    h1 {
+      font-size: 60px;
+    }
+    span {
+      font-size: 20px;
+      padding: 10px;
+    }
+    button {
+      padding: 15px 30px;
+      border: none;
+      text-decoration: none;
+      border-radius: 5px;
+      background-color: #e91e63;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      &:hover {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.203);
+      }
+    }
+  }
+}
+
+.wwsf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 20px;
+  box-shadow: 0 0 10px;
+  color: grey;
+  position: relative;
+  margin-top: -50px;
+  z-index: 5;
+
+  .wwsf-header {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: "Roboto Slab", serif;
+  }
+  .wwsf-rows {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    .responsive,
+    .quality,
+    .support {
+      text-align: center;
+      width: 300px;
+      height: 400px;
+    }
+    .responsive img,
+    .responsive h1,
+    .quality img,
+    .quality h1,
+    .support img,
+    .support h1 {
+      margin-bottom: 30px;
+      font-family: "Roboto Slab", serif;
+    }
+  }
+}
+
+.about-hestia {
+  max-width: 100%;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/mountains.jpg");
+  background-size: calc(100% - 42px) 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .about-left {
+    width: 50%;
+    text-align: center;
+    p {
+      padding-top: 30px;
+      margin: 0 auto;
+      width: 300px;
+    }
+  }
+  img {
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+  }
+}
+
+.blog {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  padding: 40px 20px;
+  color: black;
+  h1 {
+    margin-bottom: 40px;
+  }
+  .blog-contents {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    flex-wrap: wrap;
+  }
+
+  .blog-content-left,
+  .blog-content-middle,
+  .blog-content-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+    max-width: 300px;
+    padding-bottom: 80px;
+  }
+  .blog-content-middle h3 {
+    a {
+      color: rgb(6, 5, 5);
+      text-decoration: none;
+    }
+  }
+  .blog-contents p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    color: grey;
+  }
+  #unc1 {
+    color: Purple;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  #unc2 {
+    color: aqua;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  #unc3 {
+    color: red;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+}
+
+.get-in-touch-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  max-width: 100%;
+  width: 100%;
+  min-height: 500px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+  .get-in-touch-content {
+    margin: 100px 0 0 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 3;
+    h1 {
+      width: fit-content;
+    }
+    i {
+      font-size: 40px;
+    }
+    p {
+      padding-left: 31px;
+      width: fit-content;
+    }
+  }
+  .give-us-a-ring {
+    margin-left: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 3;
+    i {
+      font-size: 40px;
+    }
+    p {
+      padding-left: 31px;
+      width: fit-content;
+    }
+  }
+}

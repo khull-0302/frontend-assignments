@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap");
+body {
+  margin: 0;
+}
+
+.hero-container {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #673466, #e91e63);
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: -50px 20px 0px 20px;
+  box-shadow: 0 0 10px;
+  background-color: white;
+}
+.card-container .card-content {
+  padding: 100px 0 100px 120px;
+  width: 75%;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-container .card-content #unc1 {
+  font-size: 13px;
+  color: purple;
+}
+.card-container .card-content h3 {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 30px;
+}
+.card-container .card-content p {
+  color: grey;
+}
+.card-container .card-content #unc2 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: aqua;
+}
+.card-container .card-content #unc3 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: red;
+}
+.card-container .card-content #unc4 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: rgb(255, 213, 1);
+}
+.card-container .card-content #unc5 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: rgb(247, 1, 255);
+}
+.card-container .card-content #unc6 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: rgb(0, 163, 35);
+}
+.card-container .card-content #unc7 {
+  padding-top: 50px;
+  font-size: 13px;
+  color: rgb(111, 0, 163);
+}/*# sourceMappingURL=blog.css.map */
