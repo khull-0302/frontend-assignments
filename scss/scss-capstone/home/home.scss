@@ -45,23 +45,19 @@ html {
   @include flex-center(column);
   @include overlay-bg("../assets/clouds.jpg");
 
-  // position: relative;
   height: 600px;
   width: 100%;
   padding-top: 40px;
-  // z-index: 0;
   overflow: hidden;
 
   .hero-image {
-    // @include flex-center;
+    @include flex-center;
     width: 100%;
-    // z-index: 1;
-
     img {
       display: block;
       margin: 0 auto;
       width: 100%;
-      // min-width: 1000px;
+      min-width: 1000px;
       max-width: 1400px;
       filter: brightness(0.5);
     }
@@ -69,15 +65,11 @@ html {
 
   .hero-content {
     position: absolute;
-    // @include flex-center(column);
-    // added stuff below
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    // gap: 50px 0;
     color: white;
-    // z-index: 3;
 
     h1 {
       font-size: 60px;
@@ -216,7 +208,7 @@ html {
     > div {
       width: 300px;
       text-align: left;
-      color: $dark; // headings color
+      color: $dark;
 
       h3 {
         margin-top: 10px;
@@ -224,14 +216,14 @@ html {
         font-family: $font-slab;
 
         a {
-          text-decoration: none; // remove underline
-          color: $dark; // match other headings
+          text-decoration: none;
+          color: $dark;
         }
       }
 
       p {
         font-family: $font-basic;
-        color: $grey-text; // default paragraph color
+        color: $grey-text;
       }
 
       /* Keep specific uncategorized colors */
@@ -260,31 +252,112 @@ html {
   @include overlay-bg("../assets/mountains.jpg");
 
   width: 100%;
-  padding: 60px 0;
   min-height: auto;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  align-items: flex-start;
   color: white;
   font-family: $font-slab;
 
   .get-in-touch-content,
   .give-us-a-ring {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 30px auto;
-    padding-left: 100px;
-    line-height: 3;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 2;
 
     i {
       font-size: 40px;
     }
-
+    h1 {
+      width: fit-content;
+    }
     p {
+      width: fit-content;
       padding-left: 31px;
       font-family: $font-basic;
     }
+  }
+}
+
+@media (max-width: 1079px) {
+  .main-container {
+    margin: -30px 10px 0;
+
+    .main-rows {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      .responsive,
+      .quality,
+      .support {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        text-align: center;
+      }
+    }
+  }
+  .about-hestia {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-attachment: scroll;
+
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 40px;
+
+      h1 {
+        align-self: flex-start;
+        font-size: 32px;
+      }
+
+      p {
+        padding-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px 0 0 0;
+      padding-left: 40px;
+    }
+  }
+
+  .blog {
+    text-align: center;
+
+    .blog-contents {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      > div {
+        width: 300px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-hestia img {
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-section .hero-content h1 {
+    white-space: nowrap;
+    font-size: clamp(24px, 6vw, 36px);
   }
 }

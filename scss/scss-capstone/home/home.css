@@ -26,12 +26,17 @@ html {
   overflow: hidden;
 }
 .hero-section .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
 }
 .hero-section .hero-image img {
   display: block;
   margin: 0 auto;
   width: 100%;
+  min-width: 1000px;
   max-width: 1400px;
   filter: brightness(0.5);
 }
@@ -216,28 +221,104 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 60px 0;
   min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
   color: white;
   font-family: "Roboto Slab", serif;
 }
 .get-in-touch-container .get-in-touch-content,
 .get-in-touch-container .give-us-a-ring {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 30px auto;
-  padding-left: 100px;
-  line-height: 3;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2;
 }
 .get-in-touch-container .get-in-touch-content i,
 .get-in-touch-container .give-us-a-ring i {
   font-size: 40px;
 }
+.get-in-touch-container .get-in-touch-content h1,
+.get-in-touch-container .give-us-a-ring h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .get-in-touch-container .get-in-touch-content p,
 .get-in-touch-container .give-us-a-ring p {
+  width: -moz-fit-content;
+  width: fit-content;
   padding-left: 31px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1079px) {
+  .main-container {
+    margin: -30px 10px 0;
+  }
+  .main-container .main-rows {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .main-container .main-rows .responsive,
+  .main-container .main-rows .quality,
+  .main-container .main-rows .support {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    text-align: center;
+  }
+  .about-hestia {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-attachment: scroll;
+  }
+  .about-hestia .about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+  .about-hestia .about-left h1 {
+    align-self: flex-start;
+    font-size: 32px;
+  }
+  .about-hestia .about-left p {
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .about-hestia img {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px 0 0 0;
+    padding-left: 40px;
+  }
+  .blog {
+    text-align: center;
+  }
+  .blog .blog-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .blog .blog-contents > div {
+    width: 300px;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .about-hestia img {
+    max-width: 90%;
+    text-align: center;
+  }
+}
+@media (max-width: 780px) {
+  .hero-section .hero-content h1 {
+    white-space: nowrap;
+    font-size: clamp(24px, 6vw, 36px);
+  }
 }/*# sourceMappingURL=home.css.map */
