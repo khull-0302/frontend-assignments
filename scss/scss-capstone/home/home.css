@@ -1,47 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* VARIABLES */
+/* MIXINS */
 body {
   margin: 0;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
 .hero-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/clouds.jpg);
-  position: relative;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/clouds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 600px;
   width: 100%;
   padding-top: 40px;
-  z-index: 0;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
 }
 .hero-section .hero-image {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  z-index: 1;
 }
 .hero-section .hero-image img {
+  display: block;
   margin: 0 auto;
-  width: 75%;
-  min-width: 1000px;
+  width: 100%;
   max-width: 1400px;
   filter: brightness(0.5);
 }
 .hero-section .hero-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
-  justify-content: center;
-  gap: 50px 0;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
-  z-index: 3;
 }
 .hero-section .hero-content h1 {
   font-size: 60px;
@@ -49,195 +49,195 @@ body {
 .hero-section .hero-content span {
   font-size: 20px;
   padding: 10px;
+  font-family: "Roboto Slab", serif;
+}
+.hero-section .hero-content a {
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
 }
 .hero-section .hero-content button {
   padding: 15px 30px;
   border: none;
-  text-decoration: none;
   border-radius: 5px;
   background-color: #e91e63;
-}
-.hero-section .hero-content button a {
-  text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 .hero-section .hero-content button:hover {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.203);
 }
 
-.wwsf-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: auto;
-  border: 1px solid black;
+/* WHITE CARD SECTION */
+.main-container {
   border-radius: 5px;
-  margin: 0 20px;
-  box-shadow: 0 0 10px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: -50px 20px 0;
   color: grey;
   position: relative;
-  margin-top: -50px;
   z-index: 5;
 }
-.wwsf-container .wwsf-header {
+.main-container .main-header {
+  color: #3c4858;
   text-align: center;
-  font-size: 25px;
-  margin-top: 20px;
-  margin-bottom: 60px;
+  font-size: 35px;
+  margin: 20px 0 60px;
   font-family: "Roboto Slab", serif;
 }
-.wwsf-container .wwsf-rows {
+.main-container .main-rows {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  flex-wrap: wrap;
 }
-.wwsf-container .wwsf-rows .responsive,
-.wwsf-container .wwsf-rows .quality,
-.wwsf-container .wwsf-rows .support {
+.main-container .main-rows .responsive,
+.main-container .main-rows .quality,
+.main-container .main-rows .support {
   text-align: center;
   width: 300px;
   height: 400px;
-}
-.wwsf-container .wwsf-rows .responsive img,
-.wwsf-container .wwsf-rows .responsive h1,
-.wwsf-container .wwsf-rows .quality img,
-.wwsf-container .wwsf-rows .quality h1,
-.wwsf-container .wwsf-rows .support img,
-.wwsf-container .wwsf-rows .support h1 {
-  margin-bottom: 30px;
   font-family: "Roboto Slab", serif;
+  color: #3c4858;
 }
-
-.about-hestia {
-  max-width: 100%;
-  width: 100%;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  color: white;
-  text-align: left;
-  font-family: "Roboto Slab", serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/mountains.jpg");
-  background-size: calc(100% - 42px) 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.about-hestia .about-left {
-  width: 50%;
-  text-align: center;
-}
-.about-hestia .about-left p {
-  padding-top: 30px;
-  margin: 0 auto;
-  width: 300px;
-}
-.about-hestia img {
-  margin: 0 auto;
-  width: 400px;
-  height: auto;
-}
-
-.blog {
-  font-family: "Roboto Slab", serif;
-  text-align: center;
-  padding: 40px 20px;
-  color: black;
-}
-.blog h1 {
-  margin-bottom: 40px;
-}
-.blog .blog-contents {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 100px;
-  flex-wrap: wrap;
-}
-.blog .blog-content-left,
-.blog .blog-content-middle,
-.blog .blog-content-right {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 10px;
-  max-width: 300px;
-  padding-bottom: 80px;
-}
-.blog .blog-content-middle h3 a {
-  color: rgb(6, 5, 5);
-  text-decoration: none;
-}
-.blog .blog-contents p {
+.main-container .main-rows .responsive p,
+.main-container .main-rows .quality p,
+.main-container .main-rows .support p {
+  color: #999999;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 10px;
-  color: grey;
 }
-.blog #unc1 {
-  color: Purple;
-  font-size: 12px;
-  padding-bottom: 10px;
-}
-.blog #unc2 {
-  color: aqua;
-  font-size: 12px;
-  padding-bottom: 10px;
-}
-.blog #unc3 {
-  color: red;
-  font-size: 12px;
-  padding-bottom: 10px;
+.main-container .main-rows .responsive img,
+.main-container .main-rows .responsive h1,
+.main-container .main-rows .quality img,
+.main-container .main-rows .quality h1,
+.main-container .main-rows .support img,
+.main-container .main-rows .support h1 {
+  margin-bottom: 30px;
 }
 
-.get-in-touch-container {
-  display: flex;
-  flex-direction: column;
-  font-family: "Roboto Slab", serif;
-  max-width: 100%;
-  width: 100%;
-  min-height: 500px;
+/* ABOUT SECTION */
+.about-hestia {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/mountains.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  justify-content: flex-start;
-}
-.get-in-touch-container .get-in-touch-content {
-  margin: 100px 0 0 100px;
-  color: white;
   display: flex;
+  align-items: center;
   justify-content: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/mountains.jpg");
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 100px 0;
+}
+.about-hestia .about-left {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about-hestia .about-left h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+.about-hestia .about-left p {
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  line-height: 1.8;
+  margin: 30px auto;
+  max-width: 450px;
+  padding-left: 40px;
+}
+.about-hestia img {
+  margin: 0 auto;
+  width: 400px;
+}
+
+/* BLOG SECTION */
+.blog {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Roboto Slab", serif;
+  color: #3c4858;
+}
+.blog .blog-contents {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.blog .blog-contents > div {
+  width: 300px;
+  text-align: left;
+  color: #3c4858;
+}
+.blog .blog-contents > div h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+}
+.blog .blog-contents > div h3 a {
+  text-decoration: none;
+  color: #3c4858;
+}
+.blog .blog-contents > div p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999999;
+}
+.blog .blog-contents > div {
+  /* Keep specific uncategorized colors */
+}
+.blog .blog-contents > div #unc1 {
+  color: #89229b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.blog .blog-contents > div #unc2 {
+  color: #00bcd4;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.blog .blog-contents > div #unc3 {
+  color: #f44336;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.get-in-touch-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 60px 0;
+  min-height: auto;
+  display: flex;
   flex-direction: column;
-  line-height: 3;
+  justify-content: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
 }
-.get-in-touch-container .get-in-touch-content h1 {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.get-in-touch-container .get-in-touch-content i {
-  font-size: 40px;
-}
-.get-in-touch-container .get-in-touch-content p {
-  padding-left: 31px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
+.get-in-touch-container .get-in-touch-content,
 .get-in-touch-container .give-us-a-ring {
-  margin-left: 100px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  padding-left: 100px;
   line-height: 3;
 }
+.get-in-touch-container .get-in-touch-content i,
 .get-in-touch-container .give-us-a-ring i {
   font-size: 40px;
 }
+.get-in-touch-container .get-in-touch-content p,
 .get-in-touch-container .give-us-a-ring p {
   padding-left: 31px;
-  width: -moz-fit-content;
-  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
 }/*# sourceMappingURL=home.css.map */

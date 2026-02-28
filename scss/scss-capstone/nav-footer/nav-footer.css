@@ -8,6 +8,7 @@
   box-shadow: 0 1px 10px 1px rgb(94, 94, 94);
 }
 .nav-bar .nav-content {
+  color: #555555;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: space-between;
@@ -52,4 +53,5 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }/*# sourceMappingURL=nav-footer.css.map */

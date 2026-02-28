@@ -1,279 +1,286 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* ================= VARIABLES ================= */
+/* ================= MIXINS ================= */
+/* ================= GLOBAL ================= */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #ccc;
+  background-color: #e0e0e0;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
+/* ================= HERO ================= */
 .hero-container {
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  flex-direction: column;
-  background: linear-gradient(to right, #673466, #e91e63);
-  height: 500px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 500px;
+  background: linear-gradient(to right, #673466, #e91e63);
+  color: white;
 }
 .hero-container h1 {
-  color: white;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
 }
 .hero-container p {
-  color: white;
   font-size: 20px;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 1;
+  font-weight: 300;
 }
 
+/* ================= CARD ================= */
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  border-radius: 5px 5px 0 0;
+  background-color: #ffffff;
+  box-shadow: 0 15px 35px -4px rgba(0, 0, 0, 0.476);
   position: relative;
   z-index: 2;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: -50px 20px 0px 20px;
-  box-shadow: 0 0 10px;
-  background-color: white;
+  margin: -50px 20px 0;
 }
-.card-container .card-content {
-  padding: 100px 30px 100px 30px;
+
+.card-content {
+  padding: 100px 30px;
   min-width: 350px;
   max-width: 700px;
-  justify-content: center;
   display: flex;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
   flex-direction: column;
 }
-.card-container .card-content p {
-  font-family: Helvetica, Arial, sans-serif;
+.card-content p {
+  color: #3c4858;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
-.card-container .card-content hr {
+.card-content hr {
   border: none;
   border-top: 2px solid #ddd;
   margin: 10px 0;
   width: 100%;
 }
-.card-container .card-content a {
+.card-content h1,
+.card-content h2,
+.card-content h3,
+.card-content h4,
+.card-content h5,
+.card-content h6 {
+  color: #3c4858;
+}
+.card-content a {
   color: #e91e63;
   text-decoration: none;
 }
-.card-container .list-types {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+/* ================= LIST TYPES ================= */
+.list-types {
+  color: #3c4858;
 }
-.card-container .list-types h1 {
+.list-types h1 {
   padding-bottom: 5px;
 }
-.card-container .list-types ol {
-  font-family: Helvetica, Arial, sans-serif;
+.list-types ol,
+.list-types ul {
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
-.card-container .list-types ul {
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+
+/* ================= FORMS ================= */
+.form-element h1,
+.form-element h3 {
+  color: #3c4858;
 }
-.card-container .form-element {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  color: grey;
+.form-element p {
+  font-family: Arial, Helvetica, sans-serif;
 }
-.card-container .form-element h1,
-.card-container .form-element h3 {
-  color: rgb(0, 0, 0);
+.form-element input[type=text],
+.form-element input[type=password],
+.form-element textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid grey;
+  outline: none;
 }
-.card-container .form-element .text-field,
-.card-container .form-element .text-area {
+.form-element input[type=text]:focus,
+.form-element input[type=password]:focus,
+.form-element textarea:focus {
+  border-bottom: 2px solid #e91e63;
+}
+.form-element .text-field,
+.form-element .text-area {
   margin-bottom: 20px;
 }
-.card-container .form-element .text-field label,
-.card-container .form-element .text-area label {
+.form-element .text-field label,
+.form-element .text-area label {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.card-container .form-element .text-field input[type=text],
-.card-container .form-element .text-field textarea,
-.card-container .form-element .text-area input[type=text],
-.card-container .form-element .text-area textarea {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid grey;
-}
-.card-container .form-element .text-field input[type=text]:focus,
-.card-container .form-element .text-field textarea:focus,
-.card-container .form-element .text-area input[type=text]:focus,
-.card-container .form-element .text-area textarea:focus {
-  border-bottom: 2px solid #e91e63;
-}
-.card-container .form-element .option {
+.form-element .option {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
 }
-.card-container .form-element .password {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.form-element .password {
+  margin: 20px 0;
 }
-.card-container .form-element .password label {
+.form-element .password label {
   display: flex;
   margin-bottom: 5px;
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.card-container .form-element .password input[type=password] {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid grey;
-}
-.card-container .form-element .password input[type=password]:focus {
-  border-bottom: 2px solid #e91e63;
-}
-.card-container .form-element .file-input {
+.form-element .file-input {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.card-container .form-element .file-input label {
+.form-element .file-input label {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.card-container .form-element .file-input input[type=file] {
+.form-element .file-input input[type=file] {
   width: 100%;
   padding: 10px 12px;
   font-size: 16px;
 }
-.card-container .form-element .clear-submit {
+.form-element .clear-submit {
   display: flex;
   margin: 15px 0;
   gap: 5px;
 }
-.card-container .form-element .clear-submit input[type=reset] {
+.form-element .clear-submit input[type=reset] {
   font-size: 20px;
   padding: 10px;
-  box-shadow: 0px 0px 1px 1px rgba(233, 30, 98, 0.4235294118);
+  box-shadow: 0 0 1px 1px rgba(233, 30, 98, 0.42);
 }
-.card-container .form-element .clear-submit input[type=reset]:hover {
+.form-element .clear-submit input[type=reset]:hover {
   color: white;
 }
-.card-container .form-element .clear-submit input[type=submit] {
+.form-element .clear-submit input[type=submit] {
   background-color: #e91e63;
   border-radius: 3px;
   color: white;
   border: none;
   padding: 10px 35px;
 }
-.card-container .tables {
+
+/* ================= TABLES ================= */
+.tables {
+  width: 100%;
+  color: #3c4858;
+}
+.tables table {
   width: 100%;
 }
-.card-container .tables table {
-  width: 100%;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-}
-.card-container .tables table thead th {
+.tables table thead th {
   font-size: 20px;
   text-align: left;
   padding: 12px 15px;
-  background-color: #ffffff;
   border-bottom: 1px solid #ddd;
 }
-.card-container .tables table tbody tr td {
+.tables table tbody td {
   padding: 12px 15px;
   border-bottom: 1px solid #ddd;
 }
-.card-container .tables table tbody tr:last-child td {
+.tables table tbody tr:last-child td {
   border-bottom: none;
 }
-.card-container .tables hr {
-  margin-top: 15px;
-  margin-bottom: 30px;
+.tables hr {
+  margin: 15px 0 30px;
   border: none;
   border-top: 1px solid #ddd;
 }
-.card-container .misc {
+
+/* ================= MISC ================= */
+.misc {
   line-height: 2;
+  color: #3c4858;
 }
-.card-container .scrollable {
-  width: 100%; /* Required */
-  overflow-x: auto; /* Enables horizontal scroll */
-  overflow-y: hidden; /* Optional */
+
+.scrollable {
+  width: 100%;
+  overflow-x: auto;
   border: 1px solid #ccc;
   background-color: rgb(231, 229, 229);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
 }
-.card-container .scrollable #seperate-content {
-  width: 1000px; /* Must be wider than container */
+.scrollable #seperate-content {
+  width: 1000px;
   font-size: 15px;
 }
-.card-container .left-shadow {
+
+.left-shadow {
   padding-left: 10px;
-  box-shadow: -4px 0px 0px 0px rgb(172, 171, 171);
+  box-shadow: -4px 0 0 0 rgb(172, 171, 171);
 }
-.card-container #quote {
+
+#quote,
+#author {
   margin: 0;
 }
-.card-container #author {
-  margin: 0 0 10px 0;
+
+#author {
   font-size: 17px;
   padding-bottom: 20px;
 }
-.card-container .bottom-content {
+
+/* ================= BOTTOM SECTION ================= */
+.bottom-content {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.card-container .bottom-content #bottom-unc {
+.bottom-content #bottom-unc {
   font-size: 12px;
   padding: 5px;
   color: white;
   background-color: #e91e63;
   border-radius: 10px;
 }
-.card-container .icons {
+
+.icons {
   font-size: 20px;
   margin-left: auto;
   display: flex;
   gap: 10px;
 }
-.card-container .icons .fa-facebook {
-  color: rgb(251, 251, 252);
+.icons .fa-facebook {
+  color: white;
   background-color: rgb(1, 1, 142);
   padding: 10px;
   border-radius: 50%;
 }
-.card-container .icons .fa-twitter {
+.icons .fa-twitter {
   color: white;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   padding: 10px;
   border-radius: 50%;
 }
-.card-container .icons .fa-envelope {
-  color: rgb(255, 255, 255);
+.icons .fa-envelope {
+  color: white;
   background-color: rgb(142, 142, 142);
   padding: 10px;
   border-radius: 50%;
 }
 
+/* ================= RELATED POSTS ================= */
 .bottom-page {
   margin-top: 100px;
   text-align: center;
+  color: #3c4858;
 }
 .bottom-page h1 {
   font-size: 40px;
@@ -288,39 +295,22 @@ body {
 .bottom-page .info-wrapper p {
   color: grey;
 }
-.bottom-page .left-info {
+.bottom-page .left-info,
+.bottom-page .middle-info,
+.bottom-page .right-info {
   text-align: left;
-  border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: white;
   padding: 10px;
   width: 500px;
   margin: 10px;
 }
 .bottom-page .left-info #unc1 {
-  color: purple;
-}
-.bottom-page .middle-info {
-  text-align: left;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: white;
-  padding: 10px;
-  width: 500px;
-  margin: 10px;
+  color: #673466;
 }
 .bottom-page .middle-info #unc3 {
-  color: aqua;
-}
-.bottom-page .right-info {
-  text-align: left;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: white;
-  padding: 10px;
-  width: 500px;
-  margin: 10px;
+  color: #00bcd4;
 }
 .bottom-page .right-info #unc4 {
-  color: orange;
+  color: #f44336;
 }/*# sourceMappingURL=elements.css.map */
