@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* VARIABLES */
 $primary: #e91e63;
 $dark: #3c4858;
 $grey-text: #999999;
@@ -11,7 +10,6 @@ $font-main: "Roboto", Helvetica, Arial, sans-serif;
 $font-slab: "Roboto Slab", serif;
 $font-basic: Arial, Helvetica, sans-serif;
 
-/* MIXINS */
 @mixin flex-center($direction: row) {
   display: flex;
   justify-content: center;
@@ -37,7 +35,6 @@ body {
   font-family: $font-main;
 }
 
-/* HERO */
 .hero-container {
   @include hero-gradient;
 
@@ -46,7 +43,6 @@ body {
   }
 }
 
-/* CARD */
 .card-container {
   @include flex-center;
   @include section-card;

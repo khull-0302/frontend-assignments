@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* VARIABLES */
 $primary: #e91e63;
 $dark: #3c4858;
 $grey-text: #999999;
@@ -10,7 +9,6 @@ $font-main: "Roboto", Helvetica, Arial, sans-serif;
 $font-slab: "Roboto Slab", serif;
 $font-basic: Arial, Helvetica, sans-serif;
 
-/* MIXINS */
 @mixin flex-center($direction: row) {
   display: flex;
   justify-content: center;
@@ -40,7 +38,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* HERO */
 .hero-section {
   @include flex-center(column);
   @include overlay-bg("../assets/clouds.jpg");
@@ -102,7 +99,6 @@ html {
   }
 }
 
-/* WHITE CARD SECTION */
 .main-container {
   @include section-card;
   @include flex-center(column);
@@ -148,7 +144,6 @@ html {
   }
 }
 
-/* ABOUT SECTION */
 .about-hestia {
   @include overlay-bg("../assets/mountains.jpg");
 
@@ -191,7 +186,6 @@ html {
   }
 }
 
-/* BLOG SECTION */
 .blog {
   text-align: center;
   padding: 40px 20px;
@@ -226,7 +220,6 @@ html {
         color: $grey-text;
       }
 
-      /* Keep specific uncategorized colors */
       #unc1 {
         color: #89229b;
         font-size: 12px;

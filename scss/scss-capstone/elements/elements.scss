@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ================= VARIABLES ================= */
-
 $primary: #e91e63;
 $dark: #3c4858;
 $grey: #999999;
 $light-grey: #ddd;
 $white: #ffffff;
+$read-more: #235276;
 
 $font-main: "Roboto", Helvetica, Arial, sans-serif;
 $font-basic: Arial, Helvetica, sans-serif;
-
-/* ================= MIXINS ================= */
+$font-slab: "Roboto Slab", serif;
 
 @mixin flex-center($direction: row) {
   display: flex;
@@ -46,8 +44,6 @@ $font-basic: Arial, Helvetica, sans-serif;
   }
 }
 
-/* ================= GLOBAL ================= */
-
 html {
   scroll-behavior: smooth;
 }
@@ -58,7 +54,38 @@ body {
   font-family: $font-main;
 }
 
-/* ================= HERO ================= */
+@mixin heading-fonts {
+  h1 {
+    font-family: $font-slab;
+    font-size: 42px;
+    font-weight: 500;
+  }
+  h2 {
+    font-family: $font-slab;
+    font-size: 37px;
+    font-weight: 500;
+  }
+  h3 {
+    font-family: $font-slab;
+    font-size: 32px;
+    font-weight: 500;
+  }
+  h4 {
+    font-family: $font-slab;
+    font-size: 27px;
+    font-weight: 500;
+  }
+  h5 {
+    font-family: $font-slab;
+    font-size: 23px;
+    font-weight: 500;
+  }
+  h6 {
+    font-family: $font-slab;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
 
 .hero-container {
   @include hero-gradient;
@@ -73,8 +100,6 @@ body {
   }
 }
 
-/* ================= CARD ================= */
-
 .card-container {
   @include flex-center;
   @include section-card;
@@ -85,6 +110,7 @@ body {
 }
 
 .card-content {
+  @include heading-fonts();
   padding: 100px 30px;
   min-width: 350px;
   max-width: 700px;
@@ -94,7 +120,8 @@ body {
   p {
     color: $dark;
     font-family: $font-basic;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.5;
   }
 
   hr {
@@ -104,22 +131,40 @@ body {
     width: 100%;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $dark;
-  }
+  // h1,
+  // h2,
+  // h3,
+  // h4,
+  // h5,
+  // h6 {
+  //   color: $dark;
+  //   font-weight: 500;
+  // }
+
+  // h1 {
+  //   font-size: 42px;
+  // }
+  // h2 {
+  //   font-size: 37px;
+  // }
+  // h3 {
+  //   font-size: 32px;
+  // }
+  // h4 {
+  //   font-size: 27px;
+  // }
+  // h5 {
+  //   font-size: 23px;
+  // }
+  // h6 {
+  //   font-size: 18px;
+  // }
 
   a {
     color: $primary;
     text-decoration: none;
   }
 }
-
-/* ================= LIST TYPES ================= */
 
 .list-types {
   color: $dark;
@@ -134,8 +179,6 @@ body {
     line-height: 1.5;
   }
 }
-
-/* ================= FORMS ================= */
 
 .form-element {
   h1,
@@ -228,8 +271,6 @@ body {
   }
 }
 
-/* ================= TABLES ================= */
-
 .tables {
   width: 100%;
   color: $dark;
@@ -260,8 +301,6 @@ body {
     border-top: 1px solid $light-grey;
   }
 }
-
-/* ================= MISC ================= */
 
 .misc {
   line-height: 2;
@@ -297,8 +336,6 @@ body {
   font-size: 17px;
   padding-bottom: 20px;
 }
-
-/* ================= BOTTOM SECTION ================= */
 
 .bottom-content {
   display: flex;
@@ -342,8 +379,6 @@ body {
   }
 }
 
-/* ================= RELATED POSTS ================= */
-
 .bottom-page {
   margin-top: 100px;
   text-align: center;
@@ -361,7 +396,7 @@ body {
     margin: 100px 200px;
 
     p {
-      color: grey;
+      color: $grey;
     }
   }
 
@@ -374,13 +409,17 @@ body {
     padding: 10px;
     width: 500px;
     margin: 10px;
+    p a {
+      text-decoration: none;
+      color: $read-more;
+    }
   }
 
   .left-info #unc1 {
-    color: #673466;
+    color: #89229b;
   }
   .middle-info #unc3 {
-    color: #00bcd4;
+    color: #00bbd4d2;
   }
   .right-info #unc4 {
     color: #f44336;

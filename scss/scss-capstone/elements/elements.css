@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-/* ================= VARIABLES ================= */
-/* ================= MIXINS ================= */
-/* ================= GLOBAL ================= */
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +9,6 @@ body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
-/* ================= HERO ================= */
 .hero-container {
   display: flex;
   justify-content: center;
@@ -30,7 +26,6 @@ body {
   font-weight: 300;
 }
 
-/* ================= CARD ================= */
 .card-container {
   display: flex;
   justify-content: center;
@@ -44,6 +39,36 @@ body {
   margin: -50px 20px 0;
 }
 
+.card-content h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 42px;
+  font-weight: 500;
+}
+.card-content h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 37px;
+  font-weight: 500;
+}
+.card-content h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+.card-content h4 {
+  font-family: "Roboto Slab", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+.card-content h5 {
+  font-family: "Roboto Slab", serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+.card-content h6 {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
 .card-content {
   padding: 100px 30px;
   min-width: 350px;
@@ -54,7 +79,8 @@ body {
 .card-content p {
   color: #3c4858;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 .card-content hr {
   border: none;
@@ -62,20 +88,11 @@ body {
   margin: 10px 0;
   width: 100%;
 }
-.card-content h1,
-.card-content h2,
-.card-content h3,
-.card-content h4,
-.card-content h5,
-.card-content h6 {
-  color: #3c4858;
-}
 .card-content a {
   color: #e91e63;
   text-decoration: none;
 }
 
-/* ================= LIST TYPES ================= */
 .list-types {
   color: #3c4858;
 }
@@ -88,7 +105,6 @@ body {
   line-height: 1.5;
 }
 
-/* ================= FORMS ================= */
 .form-element h1,
 .form-element h3 {
   color: #3c4858;
@@ -175,7 +191,6 @@ body {
   padding: 10px 35px;
 }
 
-/* ================= TABLES ================= */
 .tables {
   width: 100%;
   color: #3c4858;
@@ -202,7 +217,6 @@ body {
   border-top: 1px solid #ddd;
 }
 
-/* ================= MISC ================= */
 .misc {
   line-height: 2;
   color: #3c4858;
@@ -237,7 +251,6 @@ body {
   padding-bottom: 20px;
 }
 
-/* ================= BOTTOM SECTION ================= */
 .bottom-content {
   display: flex;
   align-items: center;
@@ -276,7 +289,6 @@ body {
   border-radius: 50%;
 }
 
-/* ================= RELATED POSTS ================= */
 .bottom-page {
   margin-top: 100px;
   text-align: center;
@@ -293,7 +305,7 @@ body {
   margin: 100px 200px;
 }
 .bottom-page .info-wrapper p {
-  color: grey;
+  color: #999999;
 }
 .bottom-page .left-info,
 .bottom-page .middle-info,
@@ -305,11 +317,17 @@ body {
   width: 500px;
   margin: 10px;
 }
+.bottom-page .left-info p a,
+.bottom-page .middle-info p a,
+.bottom-page .right-info p a {
+  text-decoration: none;
+  color: #235276;
+}
 .bottom-page .left-info #unc1 {
-  color: #673466;
+  color: #89229b;
 }
 .bottom-page .middle-info #unc3 {
-  color: #00bcd4;
+  color: rgba(0, 187, 212, 0.8235294118);
 }
 .bottom-page .right-info #unc4 {
   color: #f44336;

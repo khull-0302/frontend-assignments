@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-/* VARIABLES */
-/* MIXINS */
 body {
   margin: 0;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
-/* HERO */
 .hero-container {
   display: flex;
   justify-content: center;
@@ -20,7 +17,6 @@ body {
   font-size: 50px;
 }
 
-/* CARD */
 .card-container {
   display: flex;
   justify-content: center;
