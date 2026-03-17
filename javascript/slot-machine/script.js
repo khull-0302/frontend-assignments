@@ -1,7 +1,6 @@
-const options = ["$", "#", "*"];
+const options = ["$", "$", "*"];
 let balance = 10;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-// let pullLever = Number(prompt("how much do you want to bet? "));
 
 const spinningWheel = () => {
   return new Promise((resolve) => {
@@ -16,10 +15,9 @@ async function spinMachine(yourBet) {
   let array = [];
   for (let i = 0; i < options.length; i++) {
     const symbol = await spinningWheel();
-    console.log(symbol);
     array.push(symbol);
     console.clear();
-    console.log(array);
+    console.log(array.join(" | "));
   }
 
   await sleep(1000);
@@ -31,8 +29,8 @@ async function spinMachine(yourBet) {
     alert("no matches try again");
   }
   alert(`your new balance is ${balance}`);
+  console.clear();
 }
-// loop = true;
 
 async function playGame() {
   while (balance > 0) {
@@ -44,7 +42,7 @@ async function playGame() {
       await spinMachine(pullLever);
     } else {
       alert("not enough money");
-      break;
+      continue;
     }
   }
 }
