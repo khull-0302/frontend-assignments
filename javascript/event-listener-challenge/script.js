@@ -20,6 +20,38 @@ function hexColor() {
 }
 
 // #2
+// button = document.createElement("button");
+// button.innerText = "tell me a joke";
+// const jokeContainer = document.createElement("ol");
+
+// button.addEventListener("click", () => {
+//   fetch("https://v2.jokeapi.dev/joke/Any")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       const jokeContent = document.createElement("li");
+//       if (data.type === "single") {
+//         jokeContent.innerText = data.joke;
+//       } else {
+//         jokeContent.innerText = `${data.setup} ... ${data.delivery}`;
+//       }
+//       jokeContainer.append(jokeContent);
+//       console.log(data);
+//     });
+// });
+
+// const clear = document.createElement("button");
+// clear.innerText = "Clear jokes";
+// document.body.appendChild(clear);
+
+// clear.addEventListener("click", () => {
+//   jokeContainer.innerHTML = "";
+//   console.clear();
+// });
+
+// document.body.appendChild(button);
+// document.body.appendChild(jokeContainer);
+// document.body.appendChild(clear);
+
 button = document.createElement("button");
 button.innerText = "tell me a joke";
 const jokeContainer = document.createElement("ol");
@@ -29,10 +61,14 @@ button.addEventListener("click", () => {
     .then((res) => res.json())
     .then((data) => {
       const jokeContent = document.createElement("li");
-      if (data.type === "single") {
-        jokeContent.innerText = data.joke;
+      if (data.category === "Dark") {
+        jokeContent.innerText = "unable to show joke";
       } else {
-        jokeContent.innerText = `${data.setup} ... ${data.delivery}`;
+        if (data.type === "single") {
+          jokeContent.innerText = data.joke;
+        } else {
+          jokeContent.innerText = `${data.setup} ... ${data.delivery}`;
+        }
       }
       jokeContainer.append(jokeContent);
       console.log(data);
