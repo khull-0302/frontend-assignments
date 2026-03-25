@@ -4,10 +4,11 @@
 body {
   margin: 0 auto;
   display: flex;
+  background-color: rgba(202, 202, 202, 0.489);
 }
 
 .side-bar {
-  width: 250px;
+  width: 300px;
   height: 100vh;
   background-image: linear-gradient(rgba(103, 156, 220, 0.562), white);
   color: rgba(29, 100, 150, 0.8);
@@ -45,6 +46,37 @@ body {
       box-shadow: 2px 2px 5px rgb(123, 5, 5, 0.9);
       cursor: pointer;
       transition: ease-in 0.2s;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  h1 {
+    background-color: white;
+    border: 3px dashed rgb(133, 133, 133);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 35px;
+    font-family: "Audiowide", sans-serif;
+    color: rgba(29, 100, 150, 0.8);
+    box-shadow: 0px 0px 8px 3px black;
+  }
+  .randomizer {
+    background-color: rgba(145, 126, 169, 0.466);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Bitcount Grid Double Ink", system-ui;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 3px rgb(22, 75, 113);
     }
   }
 }
