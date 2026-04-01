@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+
+  h1 {
+    color: rgb(96, 96, 96);
+    font-family: "Dancing Script", cursive;
+    font-size: 70px;
+  }
+
+  .counter-buttons {
+    padding-bottom: 50px;
+
+    .add {
+      color: green;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      background-color: rgba(4, 229, 4, 0.327);
+      cursor: pointer;
+    }
+    .subtract {
+      color: red;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      background-color: rgba(228, 0, 0, 0.406);
+      cursor: pointer;
+    }
+    .reset {
+      color: blue;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      background-color: rgba(23, 0, 228, 0.406);
+      cursor: pointer;
+    }
+  }
+}
+.greeting-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 50px;
+  h1 {
+    color: rgb(158, 6, 181);
+    font-family: "Dancing Script", cursive;
+    font-size: 70px;
+  }
+  .greeting-button {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(129, 0, 228, 0.406);
+
+    &:hover {
+      box-shadow: 0px 0px 5px 1px rgb(96, 96, 96);
+      cursor: pointer;
+    }
+  }
+}
+
+.show-hide-container {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(81, 107, 105, 0.68) 50%,
+    rgba(81, 107, 105, 0.68) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 100px;
+  padding: 20px;
+  margin-top: 20px;
+  h1 {
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+    color: white;
+  }
+  .show-hide-button {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    &:hover {
+      box-shadow: 0px 0px 5px 1px rgb(96, 96, 96);
+      cursor: pointer;
+    }
+  }
+}
